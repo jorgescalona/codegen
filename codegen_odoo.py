@@ -162,7 +162,7 @@ class OpenERPRenderer(ObjRenderer) :
         "category" : "Desconocido",
         "summary": "",
         "description": \"\"\"  \"\"\",
-        "depends" : ['base','static'],
+        "depends" : ['base'],
         "init_xml" : [ ],
         "demo_xml" : [ ],
         "update_xml" : ['vistas/%(module)s_view.xml', 'security/ir.model.access.csv'],
