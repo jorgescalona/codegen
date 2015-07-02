@@ -406,11 +406,157 @@ from openerp.osv import fields,osv
         return result
     
     def html_get(self):
-        html = """<!DOCTYPE html> <html lang="es"> <head><title>Codegen OpenERP</title> <style> * { margin: 0; padding: 0; } html,body { height:100%; } #wrapper { min-height:100%; } header { display:block; background:#E6E6E6; padding:10px 0px; } section { overflow: auto;  padding-bottom: 60px;  padding-top:30px; } footer { position: relative; margin-top: -50px;  height: 40px; padding:5px 0px; clear: both; background: #8A2908; text-align: center; color: #fff; }  .define { width:960px; margin:0 auto; } </style> </head> <body> <div id="wrapper"> <header> <div class='define' align='center'> <h1 style="color:#8A2908">Codegen Odoo 2015 V1</h1> </div> </header> <section> <div class='define'> <pre>
-##############################################################################
-#    *************************************************************************
-#    ********************* CODEGEN ODOO 2015 V1 ******************************
-#    *************************************************************************
+        html = """<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Codegen OdooERP</title>
+<style>
+	
+	
+	body {
+		
+		font:14px/1.5 Arial, sans-serif;
+		text-align:center;
+		color:#333;
+		background:#fff;
+	}
+
+	a {
+		font-weight:bold;
+		color:#dd3333;
+		
+	}
+
+	a:hover,
+	a:focus,
+	a:active {
+		text-decoration:none;
+	}
+	h1{
+	font-size:58px
+	}
+
+	.container {
+		position:relative;
+		z-index:1;
+		width:900px;
+		
+		margin:0 auto;
+		background:#fff;
+	}
+
+	.container:after {
+		content:"";
+		display:block;
+		clear:both;
+		visibility:hidden;
+		height:0;
+		font-size:0;
+	}
+
+	/* Sombra general */
+
+	.drop-shadow {
+		position:relative;
+		
+		width:80%;
+		padding:1em;
+		margin:2em 50px 4em;
+		background:#fff;
+		-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+		   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+				box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	}
+
+	.drop-shadow:before,
+	.drop-shadow:after {
+		content:"";
+		position:absolute;
+		z-index:-2;
+	}
+
+	.drop-shadow p {
+		font-size:16px;
+		font-weight:bold;
+	}
+
+	/* Bordes redondeados */
+
+	.lifted {
+		-moz-border-radius:4px;
+			 border-radius:4px;
+	}
+
+	.lifted:before,
+	.lifted:after {
+		bottom:15px;
+		left:10px;
+		width:50%;
+		height:20%;
+		max-width:300px;
+		max-height:100px;
+		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+		   -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+				box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+		-webkit-transform:rotate(-3deg);
+		   -moz-transform:rotate(-3deg);
+			-ms-transform:rotate(-3deg);
+			 -o-transform:rotate(-3deg);
+				transform:rotate(-3deg);
+	}
+
+	.lifted:after {
+		right:10px;
+		left:auto;
+		-webkit-transform:rotate(3deg);
+		   -moz-transform:rotate(3deg);
+			-ms-transform:rotate(3deg);
+			 -o-transform:rotate(3deg);
+				transform:rotate(3deg);
+	}
+
+
+	.rotated {
+		-webkit-box-shadow:none;
+		   -moz-box-shadow:none;
+				box-shadow:none;
+		-webkit-transform:rotate(-3deg);
+		   -moz-transform:rotate(-3deg);
+			-ms-transform:rotate(-3deg);
+			 -o-transform:rotate(-3deg);
+				transform:rotate(-3deg);
+	}
+
+	.rotated > :first-child:before {
+		content:"";
+		position:absolute;
+		z-index:-1;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		background:#fff;
+		-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+		   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+				box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+        <h1><a href="https://github.com/MarioSandoval/Odoo/">Codegen Odoo ERP</a></h1>
+
+        
+
+        <div class="drop-shadow lifted rotated" align="left">
+            <pre>
+##########################################################################################
+#    *************************************************************************************
+#    ********************* CODEGEN ODOO 2015 V1 ******************************************
+#    *************************************************************************************
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 #    Este programa es software libre: usted puede redistribuirlo y / o modificarlo
 #    bajo los t&eacute;rminos de la Licencia P&uacute;blica General Affero GNU como
@@ -425,15 +571,12 @@ from openerp.osv import fields,osv
 #    Deber&iacute;a haber recibido una copia de la Licencia P&uacute;blica General Affero GNU
 #    junto con este programa. Si no es as&iacute;, consulte  <a href="http://www.gnu.org/licenses/" target="_BLANK">http://www.gnu.org/licenses/</a>.
 #                                      
-###############################################################################
-</pre> <br>
-<p>
-Este archivo fue modificado con el prop&oacute;sito de optimizar los trabajos al momento de crear un modulo organizando as&iacute; las carpetas y dando permisos a usuarios que no son administradores del framework, ademas de corregir errores en Odoo con la importaci&oacute;n del osv y generando vistas agradables.
-</p> 
-<br/>
-
-</div> </section> </div> <footer> <div class='define'> 
-<p>Generado por el plugin OpenERP para Dia!</p> </div> </footer> </body> </html>
+###########################################################################################
+</pre>
+        </div>
+    </div>
+</body>
+</html>
 """ 
         return html
 
@@ -444,7 +587,7 @@ Este archivo fue modificado con el prop&oacute;sito de optimizar los trabajos al
         module = self.data_get()['module']
         zip = zipfile.ZipFile(self.filename, 'w')
         filewrite = {
-                'manual_odoo.html':self.html_get(),
+                'leer.html':self.html_get(),
                 '__init__.py':self.init_get(),
                 '__openerp__.py':self.terp_get(),
                 'modelos/'+module+'.py': self.code_get(),
