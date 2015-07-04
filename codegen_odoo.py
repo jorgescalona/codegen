@@ -158,7 +158,7 @@ class OpenERPRenderer(ObjRenderer) :
         "name" : "%(module)s",
         "version" : "0.2",
         "author" : "Mario Sandoval",
-        "website" : "https://twitter.com/MarioSandovalP3",
+        "website" : "https://github.com/MarioSandoval",
         "category" : "Desconocido",
         "summary": "",
         "description": \"\"\"  \"\"\",
@@ -411,136 +411,23 @@ from openerp.osv import fields,osv
 <head>
 <meta charset="utf-8">
 <title>Codegen OdooERP</title>
-<style>
-	
-	
-	body {
-		
-		font:14px/1.5 Arial, sans-serif;
-		text-align:center;
-		color:#333;
-		background:#fff;
-	}
-
-	a {
-		font-weight:bold;
-		color:#dd3333;
-		
-	}
-
-	a:hover,
-	a:focus,
-	a:active {
-		text-decoration:none;
-	}
-	h1{
-	font-size:58px
-	}
-
-	.container {
-		position:relative;
-		z-index:1;
-		width:900px;
-		
-		margin:0 auto;
-		background:#fff;
-	}
-
-	.container:after {
-		content:"";
-		display:block;
-		clear:both;
-		visibility:hidden;
-		height:0;
-		font-size:0;
-	}
-
-	/* Sombra general */
-
-	.drop-shadow {
-		position:relative;
-		
-		width:80%;
-		padding:1em;
-		margin:2em 50px 4em;
-		background:#fff;
-		-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-		   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-				box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	}
-
-	.drop-shadow:before,
-	.drop-shadow:after {
-		content:"";
-		position:absolute;
-		z-index:-2;
-	}
-
-	.drop-shadow p {
-		font-size:16px;
-		font-weight:bold;
-	}
-
-	/* Bordes redondeados */
-
-	.lifted {
-		-moz-border-radius:4px;
-			 border-radius:4px;
-	}
-
-	.lifted:before,
-	.lifted:after {
-		bottom:15px;
-		left:10px;
-		width:50%;
-		height:20%;
-		max-width:300px;
-		max-height:100px;
-		-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-		   -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-				box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-		-webkit-transform:rotate(-3deg);
-		   -moz-transform:rotate(-3deg);
-			-ms-transform:rotate(-3deg);
-			 -o-transform:rotate(-3deg);
-				transform:rotate(-3deg);
-	}
-
-	.lifted:after {
-		right:10px;
-		left:auto;
-		-webkit-transform:rotate(3deg);
-		   -moz-transform:rotate(3deg);
-			-ms-transform:rotate(3deg);
-			 -o-transform:rotate(3deg);
-				transform:rotate(3deg);
-	}
-
-
-	.rotated {
-		-webkit-box-shadow:none;
-		   -moz-box-shadow:none;
-				box-shadow:none;
-		-webkit-transform:rotate(-3deg);
-		   -moz-transform:rotate(-3deg);
-			-ms-transform:rotate(-3deg);
-			 -o-transform:rotate(-3deg);
-				transform:rotate(-3deg);
-	}
-
-	.rotated > :first-child:before {
-		content:"";
-		position:absolute;
-		z-index:-1;
-		top:0;
-		bottom:0;
-		left:0;
-		right:0;
-		background:#fff;
-		-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-		   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-				box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	}
+<style>body {font:14px/1.5 Arial, sans-serif;text-align:center;color:#333;background:#fff;}
+a {font-weight:bold;color:#dd3333;}a:hover,a:focus,a:active {text-decoration:none;}h1{font-size:58px}
+.container {position:relative;z-index:1;width:900px;margin:0 auto;background:#fff;}
+.container:after {content:"";display:block;clear:both;visibility:hidden;height:0;font-size:0;}
+.drop-shadow {position:relative;width:80%;padding:1em;margin:2em 50px 4em;background:#fff;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
+.drop-shadow:before,.drop-shadow:after {content:"";position:absolute;z-index:-2;}
+.drop-shadow p {font-size:16px;font-weight:bold;}.lifted {-moz-border-radius:4px; border-radius:4px;}
+.lifted:before,.lifted:after {bottom:15px;left:10px;width:50%;height:20%;max-width:300px;max-height:100px;
+-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);-moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);-webkit-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-ms-transform:rotate(-3deg);-o-transform:rotate(-3deg);transform:rotate(-3deg);}.lifted:after {right:10px;
+left:auto;-webkit-transform:rotate(3deg);-moz-transform:rotate(3deg);-ms-transform:rotate(3deg); -o-transform:rotate(3deg);transform:rotate(3deg);}
+.rotated {-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;-webkit-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-ms-transform:rotate(-3deg);-o-transform:rotate(-3deg);transform:rotate(-3deg);
+}.rotated > :first-child:before {content:"";position:absolute;z-index:-1;top:0;bottom:0;left:0;right:0;
+background:#fff;-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
 
 </style>
 </head>
