@@ -493,6 +493,6 @@ background:#fff;-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0
 
 
 # dia-python keeps a reference to the renderer class and uses it on demand
-dia.register_export ("PyDia Code Generation (OpenERP)", "zip", OpenERPRenderer())
+dia.register_export ("PyDia Generación de código (Odoo)", "zip", OpenERPRenderer())
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
