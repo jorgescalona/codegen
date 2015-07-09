@@ -158,7 +158,7 @@ class OpenERPRenderer(ObjRenderer) :
         "name" : "%(module)s",
         "version" : "0.2",
         "author" : "Mario Sandoval",
-        "website" : "https://github.com/MarioSandoval",
+        "website" : "https://mariosandovalp3.wordpress.com/",
         "license" : "AGPL-3",
         "category" : "Desconocido",
         "summary": "",
@@ -413,7 +413,7 @@ from openerp.osv import fields,osv
 <meta charset="utf-8">
 <title>Codegen OdooERP</title>
 <style>body {font:14px/1.5 Arial, sans-serif;text-align:center;color:#333;background:#fff;}
-a {font-weight:bold;color:#dd3333;}a:hover,a:focus,a:active {text-decoration:none;}h1{font-size:58px}
+a {font-weight:bold;color:#dd3333;}a:hover,a:focus,a:active {text-decoration:none;}h1{font-size:48px}
 .container {position:relative;z-index:1;width:900px;margin:0 auto;background:#fff;}
 .container:after {content:"";display:block;clear:both;visibility:hidden;height:0;font-size:0;}
 .drop-shadow {position:relative;width:80%;padding:1em;margin:2em 50px 4em;background:#fff;
@@ -462,7 +462,21 @@ background:#fff;-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0
 ###########################################################################################
 </pre>
         </div>
+
+
+        
     </div>
+    <div align="left">
+    <h2>Recopilación de métodos para programar módulos</h2>
+<ul>
+
+<ul>
+<li><a href="https://mariosandovalp3.wordpress.com/2015/07/09/restricciones-con-sql-constraint-odoo/" target="_BLANK">Restricciones con SQL Constraint</a></li>
+<li><a href="https://mariosandovalp3.wordpress.com/2015/07/09/tipos-relacionales-odoo/" target="_BLANK">Tipos relacionales</a></li>
+<li><a href="https://mariosandovalp3.wordpress.com/2015/07/09/valores-por-defecto-en-campos-odoo/" target="_BLANK">Valores por defecto en campos</a></li>
+</ul> 
+
+</div>
 </body>
 </html>
 """ 
