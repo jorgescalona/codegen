@@ -474,6 +474,7 @@ background:#fff;-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0
 <li><a href="https://mariosandovalp3.wordpress.com/2015/07/09/restricciones-con-sql-constraint-odoo/" target="_BLANK">Restricciones con SQL Constraint</a></li>
 <li><a href="https://mariosandovalp3.wordpress.com/2015/07/09/tipos-relacionales-odoo/" target="_BLANK">Tipos relacionales</a></li>
 <li><a href="https://mariosandovalp3.wordpress.com/2015/07/09/valores-por-defecto-en-campos-odoo/" target="_BLANK">Valores por defecto en campos</a></li>
+<li><a href="https://mariosandovalp3.wordpress.com/2015/07/09/vista-kanban-odoo/" target="_BLANK">Vista Kanban – Odoo</a></li>
 </ul> 
 
 </div>
