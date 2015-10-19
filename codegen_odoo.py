@@ -158,7 +158,7 @@ class OpenERPRenderer(ObjRenderer) :
         "name" : "%(module)s",
         "version" : "0.1",
         "author" : "Bachaco-VE",
-        "website" : "https://attkatara.wordpress.com/",
+        "website" : "https://attakatara.wordpress.com/",
         "license" : "AGPL-3",
         "category" : "Desconocido",
         "summary": "",
